@@ -1,10 +1,10 @@
 # [level unrated] 문자열로 변환 - 181845 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181845) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181845?language=java) 
 
 ### 성능 요약
 
-메모리: 10.1 MB, 시간: 0.00 ms
+메모리: 72 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 10월 1일 22:46:59
+2023년 10월 1일 23:18:47
 
 ### 문제 설명
 
