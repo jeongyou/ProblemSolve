@@ -4,9 +4,6 @@ const input = readline.trim().split("\n");
 const [n, ...rawArr] = input;
 // ---
 
-const dx = [1, -1, 0, 0];
-const dy = [0, 0, 1, -1];
-
 const [N, M] = n.trim().split(' ').map(Number);
 
 const graph = Array.from({ length: N + 1 }, () => []);
@@ -18,10 +15,18 @@ for (let i = 0; i < M; i++) {
   graph[b].push(a);
 }
 
-function dfs(node) {
-  visited[node] = true;
-  for (const next of graph[node]) {
-    if (!visited[next]) dfs(next);
+function bfs(start) {
+  const queue = [];
+  let head = 0;
+  visited[start] = true;
+  queue.push(start);
+  while (head < queue.length) {
+    const cur = queue[head++];
+    for (const next of graph[cur]) {
+      if (visited[next]) continue;
+      visited[next] = true;
+      queue.push(next);
+    }
   }
 }
 
@@ -29,9 +34,9 @@ let count = 0;
 
 for (let i = 1; i <= N; i++) {
   if (!visited[i]) {
-    dfs(i)
+    bfs(i);
     count += 1;
-  };
+  }
 }
 
 console.log(count)
